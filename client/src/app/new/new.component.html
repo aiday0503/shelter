@@ -1,0 +1,30 @@
+<div class="container">
+    <form (submit)="create()">
+        <h1>Know of a pet needing a home?</h1>
+        <h4>Pet Name:</h4>
+        <input type="text" name="name" [(ngModel)]="pet.name">
+        <h4>Pet Type:</h4>
+        <input type="text" name="type" [(ngModel)]="pet.type">
+        <h4>Description:</h4>
+        <input type="text" name="description" [(ngModel)]="pet.description">
+        <h4>Skills (Optional):</h4>
+        <span>Skill 1:</span>
+        <input type="text" name="skill" [(ngModel)]="pet.skill1"> <br>
+        <span>Skill 2:</span>
+        <input type="text" name="skill" [(ngModel)]="pet.skill2"> <br>
+        <span>Skill 3:</span>
+        <input type="text" name="skill" [(ngModel)]="pet.skill3"> <br>
+
+
+
+
+
+
+
+        <button [routerLink]="['/']" class="btn btn-danger"> Cancel </button>
+        <button class="btn btn-primary"> Register </button>
+    </form>
+    <div *ngIf="errors"> {{ errors.message | json}}
+        <span style="color:red">{{errors.message}}</span>
+    </div>
+</div>

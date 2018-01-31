@@ -1,0 +1,23 @@
+<button [routerLink]="['']" class="btn btn-primary"> Home </button>
+
+
+<ul *ngFor="let each of pet">
+    <h1> Details about {{each.name}}</h1>
+    <li> Pet type:{{ each.type }} </li>
+    <li> Description: {{ each.description }}</li>
+    <li> Skills: {{ each.skill1 }} {{ each.skill2 }} {{ each.skill3 }}</li>
+    <li> Likes:{{ each.like }} </li>
+</ul>
+
+
+<button (click)='onLike(pet)' class="btn btn-primary"> Like this Post </button>
+<button (click)='onAdopt()' class="btn btn-primary"> Adopt this pet! </button>
+
+
+<div *ngIf="errors">
+
+
+    {{ errors.message | json }}
+
+
+</div>

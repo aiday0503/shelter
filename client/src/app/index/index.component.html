@@ -1,0 +1,28 @@
+<button [routerLink]="['/new']" class="btn btn-primary"> Add a pet to the Shelter </button>
+<br>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Actions</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let pet of pets'>
+                <th scope="row"> {{pet.name}}</th>
+                <td>{{pet.type}}</td>
+                <td>
+                    <button (click)='onDetail(pet._id)' class="btn btn-primary"> Details </button>
+                    <button (click)='onEdit(pet._id)' class="btn btn-warning"> Edit</button>
+
+                </td>
+
+            </tr>
+        </tbody>
+
+
+    </table>
+</div>

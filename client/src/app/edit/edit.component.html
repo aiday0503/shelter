@@ -1,0 +1,18 @@
+<div class="container">
+    <h4>Pet name:</h4>
+    <input type="text" name="name" [(ngModel)]="pet.name" placeholder="pet.name">
+    <h4>Pet type:</h4>
+    <input type="text" name="type" [(ngModel)]="pet.type" placeholder="pet.type">
+    <h4>Description:</h4>
+    <input type="text" name="description" [(ngModel)]="pet.description" placeholder="pet.description">
+    <h4>Skills (Optional):</h4>
+    <span>Skill 1:</span>
+    <input type="text" name="skill" [(ngModel)]="pet.skill1" placeholder="pet.skill1"> <br>
+    <span>Skill 2:</span>
+    <input type="text" name="skill" [(ngModel)]="pet.skill2" placeholder="pet.skill2"> <br>
+    <span>Skill 3:</span>
+    <input type="text" name="skill" [(ngModel)]="pet.skill3" placeholder="pet.skill3"> <br>
+
+    <button (click)='onUpdate(pet._id)' class="btn btn-primary"> Edit Pet </button>
+    <button [routerLink]="['']" class="btn btn-danger"> Cancel </button>
+</div>
